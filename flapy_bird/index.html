@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-color: #87CEEB;
+    }
+    #loginForm, #playAgain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #e5ede6;
+    }
+    #loginForm input, #loginForm button, #playAgain button {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    #gameCanvas {
+      display: flex;
+      background-color: rgb(73, 182, 255);
+    }
+    #playAgain {
+      display: flex;
+      background-color: rgb(122, 187, 122);
+    }
+  </style>
+</head>
+<body>
+  <div id="loginForm">
+    <h2>Login to Play Flappy Bird</h2>
+    <input type="text" id="username" placeholder="Enter Username" required>
+    <input type="password" id="password" placeholder="Enter Password" required>
+    <button id="loginButton">Login</button>
+  </div>
+
+  <div id="playAgain">
+    <h2>OMG Game Over Let's Play Again Bestie!</h2>
+    <p id="finalScore"></p>
+    <button id="playAgainButton">Play </button>
+  </div>
+
+  <canvas id="gameCanvas" width="400" height="600"></canvas>
+  <script src="game.js"></script>
+</body>
+</html>
